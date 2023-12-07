@@ -5,11 +5,13 @@ body {
 }
 
 header {
+    
     background-color: #333;
     color: #fff;
     padding: 10px;
     text-align: center;
 }
+
 
 nav ul {
     list-style: none;
@@ -76,11 +78,46 @@ footer {
             cursor: pointer;
         }
 
-        img {
-            width: 100px; 
+   
+        .image{
+                 width: 100px; 
             height: auto;
             position: absolute;
             top: 0;
             right: 0;
         }
-        
+        .imageAvatar{
+         width: 150px; 
+         height: auto;
+         position: absolute;
+         top: 200px;
+         left: 100px;
+        }
+
+
+        .imageVoiture {
+        width: 300px;
+         height: auto;
+         position: absolute;
+         top: 450px;
+         left: 50px;
+       
+        }
+.bouton1 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 360px;
+    left: 50px;
+}
+.bouton2 {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    position: absolute;
+    top: 630px;
+    left: 100px;
+}
+    
+       

@@ -11,44 +11,52 @@
     <style>
         /* Styler la div qui contiendra la carte */
         #map {
-            height: 400px;
+            height: 570px;
         }
     </style>
 </head>
 <body>
 
+
     <header>
-        <h1>Alcovoit</h1>
+        <div id="logo-container">
+            <img src="img/logo.PNG" alt="image" class="image">
+        </div>
         <nav>
             <ul>
+                <h1>Alcovoit</h1>
                 <li><a href="site.html">Accueil</a></li>
-                <li><a href="connexion.html">compte</a></li>
-                <li><a href="map.html">map</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="map.html">Map</a></li>
             </ul>
+
         </nav>
     </header>
 
-    <h1>Ma Carte OpenStreetMap</h1>
 
-    <!-- Div pour contenir la carte -->
+    <footer>
+        <p> 2023 Alcovoit. Tous droits réservés.</p>
+    </footer>
     <div id="map"></div>
-
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script>
-        // Initialiser la carte avec Leaflet
-        var mymap = L.map('map').setView([51.505, -0.09], 13);
+        // Coordonnées de Lorient
+        var Coords = [47.7521325, -3.3951392];
 
-        // Ajouter une couche de tuiles OpenStreetMap
+        // Initialisation de la carte
+        var map = L.map('map').setView(Coords, 13);
+
+        // Ajout de la couche OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '© OpenStreetMap contributors'
-        }).addTo(mymap);
+        }).addTo(map);
 
-        // Ajouter un marqueur à une position spécifique
-        var marker = L.marker([51.5, -0.09]).addTo(mymap);
-        marker.bindPopup("<b>Hello world!</b><br>This is a popup.").openPopup();
+        // Ajout du marqueur à Lorient
+        L.marker(Coords).addTo(map)
+            .bindPopup('Lycée notre dame de la paix')
+            .openPopup();
+
     </script>
-<footer>
-    <p> 2023 Alcovoit. Tous droits réservés.</p>
-</footer>
 
 </body>
 </html>
