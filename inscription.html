@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Accueil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="img/"> 
+</head>
+<body>
+    <header>
+        Alcovoit
+        <nav>
+            <ul>
+                <li><a href="site.html">Accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+ <style>
+    #signup-container {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+    }
+
+    #signup-container a {
+        display: block;
+        margin-top: 15px;
+        text-align: center;
+        text-decoration: none;
+        color: #333;
+    }
+</style>
+
+
+
+<div id="signup-container">
+    <h2>Inscription</h2>
+    <form id="signup-form" onsubmit="submitForm(event)">
+        <label for="username">Nom d'utilisateur:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Mot de passe:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">S'inscrire</button>
+    </form>
+</div>
+</body>
+</html>

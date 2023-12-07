@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte OpenStreetMap</title>
+    <!-- Inclure les fichiers CSS et JS de Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Styler la div qui contiendra la carte */
+        #map {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Alcovoit</h1>
+        <nav>
+            <ul>
+                <li><a href="site.html">Accueil</a></li>
+                <li><a href="connexion.html">compte</a></li>
+                <li><a href="map.html">map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Ma Carte OpenStreetMap</h1>
+
+    <!-- Div pour contenir la carte -->
+    <div id="map"></div>
+
+    <script>
+        // Initialiser la carte avec Leaflet
+        var mymap = L.map('map').setView([51.505, -0.09], 13);
+
+        // Ajouter une couche de tuiles OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(mymap);
+
+        // Ajouter un marqueur à une position spécifique
+        var marker = L.marker([51.5, -0.09]).addTo(mymap);
+        marker.bindPopup("<b>Hello world!</b><br>This is a popup.").openPopup();
+    </script>
+<footer>
+    <p> 2023 Alcovoit. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>

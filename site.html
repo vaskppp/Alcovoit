@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covoiturage Express</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Empêche le défilement pendant l'animation */
+        }
+
+        #message-tab {
+            position: fixed;
+            top: 50%;
+            right: 0;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        #message-panel {
+            position: fixed;
+            top: 0;
+            right: -300px; /* Commence en dehors de l'écran */
+            height: 100%;
+            width: 300px;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: right 0.3s ease-in-out;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+
+<header>
+    <h1>Alcovoit</h1>
+    <img src="img/logo.PNG" alt="image">
+    <nav>
+        <ul>
+            <li><a href="site.html">Accueil</a></li>
+            <li><a href="connexion.html">compte</a></li>
+            <li><a href="map.html">map</a></li>
+        </ul>
+    </nav>
+    
+</header>
+<body>
+
+    <div id="message-tab" onclick="toggleMessagePanel()">Message</div>
+    <div id="message-panel">
+        <div id="close-btn" onclick="toggleMessagePanel()">X</div>
+        <!-- Exemples de personnes et de messages -->
+        <ul>
+            <li><strong>John Doe:</strong> Salut, comment ça va?</li>
+            <li><strong>Jane Smith:</strong> Je suis partante pour le déjeuner demain!</li>
+            <li><strong>Bob Johnson:</strong> Nouveau projet en vue, avez-vous des idées?</li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMessagePanel() {
+            var messagePanel = document.getElementById('message-panel');
+
+            if (messagePanel.style.right === '0px') {
+                messagePanel.style.right = '-300px';
+            } else {
+                messagePanel.style.right = '0px';
+            }
+        }
+    </script>
+<section id="accueil">
+    <h2>Bienvenue sur Alcovoit</h2>
+    <p>Trouvez des covoitureurs pour vos trajets quotidiens.</p>
+</section>
+<footer>
+    <p> 2023 Alcovoit. Tous droits réservés.</p>
+</footer>
+
+</body>
+</html>
+

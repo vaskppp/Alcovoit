@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscription</title>
+    <style>
+        #signup-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+    
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    
+        #signup-container a {
+            display: block;
+            margin-top: 15px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Alcovoit
+        <nav>
+            <ul>
+                <li><a href="site.html">Accueil</a></li>
+                <li><a href="connexion.html">compte</a></li>
+                <li><a href="map.html">map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="signup-container">
+        <h2>Compte</h2>
+        <form id="signup-form" onsubmit="submitForm(event)">
+    
+            <label for="email">Nom d'utilisateur/Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="submit">Se connecter</button>
+        </form>
+        <a href="inscription.html">S'inscrire? Inscrivez-vous ici</a>
+</body>
+</html>
